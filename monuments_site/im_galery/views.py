@@ -1,6 +1,6 @@
 from django.shortcuts import render
-
+from .models import *
 
 def galery_render(request):
-    images = None
-    return render(request, 'galery.html', context={images})
+    return render(request, 'galery.html', context={'photos':album.objects.all()})
+# admin/im_galery/album/

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" style="height:100%;">
   <head>
-    { load "static" }
+    {% load static %}
     <link rel="stylesheet" href="{% static 'galery.css' %}">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -13,23 +13,25 @@
     <title>Наши работы</title>
 
   </head>
-  <body>
+  <body style="height:100%;">
 
 
-<div class="container content">
+<div style="position:fixed;margin-left:10px;z-index:1;margin-top:-20px;">
+  <a href="{% url 'main_page_url' %}" class="btn btn-danger" style="">на главную</a>
+</div>
+
+
+<div class="content">
+<div class="container" style="z-index:2;">
   <div class="row">
 
-    {% for playlist in playlists %}
+    {% for photo in photos %}
     <div class="col-md-4">
       <div class="product">
-
-        <div class="product-img">
-          <a href="#"><img src="{{ playlist.poster }}" alt=""></a>
-        </div>
+        <img src="{{ photo.poster.url }}" style="max-height: 100%;" alt="">
         <p class="product-title">
-          <a href="#">{{ playlist.slug }}</a>
+          <a href="{{ photo.poster.url }}">{{ photo.slug }}</a>
         </p>
-
       </div>
     </div>
     {% endfor %}
