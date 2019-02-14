@@ -3,4 +3,3 @@ from .models import *
 
 def galery_render(request):
     return render(request, 'galery.html', context={'photos':album.objects.all()})
-# admin/im_galery/album/

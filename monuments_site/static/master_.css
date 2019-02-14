@@ -1,0 +1,125 @@
+html, body{
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#nav{
+  margin: 10px;
+  margin-bottom: ;
+  position: fixed;
+}
+
+.nav_btn{
+  border-radius: 5px !important;
+  border: 2px solid #dc3545 !important;
+  background: white !important;
+  color: #dc3545 !important;
+  z-index: 0;
+}
+
+body{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 400;
+  font-size: 160%;
+  min-height: 100%;
+}
+
+a{
+  color: white;
+  font-size: 160%;
+  font-family: 'Exo 2', sans-serif;
+  text-decoration: none;
+}
+
+input{
+  height: 60px;
+  font-size: 160%;
+  width: 300px;
+  border-radius: 4px;
+  padding-left: 7px;
+  border: 0.5px solid rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  text-align: center;
+}
+
+nav{
+  justify-content: space-around;
+}
+
+header{
+  font-family: 'Roboto Slab', serif;
+  justify-content: space-around;
+  padding-top: 20px;
+  min-height: 80px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  width: 100%;
+  position: fixed;
+  display: flex;
+}
+
+
+.bg-image{
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: solid gray 1px;
+  box-shadow: 3px 3px 3px gray;
+}
+
+.tz{
+  color: black;
+  text-align: center;
+  width: 90%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+@media (max-width: 600px){
+  #rip{
+    background-image: url('rip2.png');
+  }
+
+  /* .tz{ */
+    /* width:50%; */
+  /* } */
+}
+
+@media (min-width: 601px){
+  #rip{
+    background-image: url('rip.png');
+  }
+
+  .tz{
+    width:50%;
+  }
+
+}
+
+
+
+
+h2{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+}
+
+.content{
+  text-align: center;
+  /* font-size: 160%; */
+  /* margin: 20px; */
+  padding-top: 20px;
+  /* border: solid gray 1px; */
+  border-radius: 3px;
+  min-height: 30%;
+}
+
+
+
+
+footer{
+  padding: 50px;
+  text-align: center;
+}
