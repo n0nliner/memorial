@@ -43,20 +43,19 @@
           </div>
 
           <nav style="display:flex;justify-content:space-around;width:100%;border: 0.5px solid white;margin-top:20px; border-left:none;border-right:none;flex-wrap:wrap">
-            <div style="min-width:165px">
-              <a href="#" style="font-family:'Oswald',sans-serif;" class="text-white" onclick="goto(0);">О нас</a>
+            <div style="min-width:165px" onclick="goto(0);">
+              <a style="font-family:'Oswald',sans-serif;" class="text-white">О нас</a>
             </div>
-            <div style="min-width:165px">
-              <a href="#" style="font-family:'Oswald',sans-serif;" class="text-white" onclick="goto(1);">Наш продукт</a>
+            <div style="min-width:165px" onclick="goto(1);">
+              <a style="font-family:'Oswald',sans-serif;" class="text-white">Наш продукт</a>
             </div>
-            <div style="min-width:165px">
-              <a href="#" style="font-family:'Oswald',sans-serif;" class="text-white" onclick="goto(2);">производство</a>
+            <div style="min-width:165px" onclick="goto(2);">
+              <a style="font-family:'Oswald',sans-serif;" class="text-white">производство</a>
             </div>
-            <div style="min-width:165px">
-              <a href="#" style="font-family:'Oswald',sans-serif;" class="text-white" onclick="goto(3);">Установка</a>
+            <div style="min-width:165px" onclick="goto(3);">
+              <a style="font-family:'Oswald',sans-serif;" class="text-white">Установка</a>
             </div>
           </nav>
-
 
           </div>
         </div>
@@ -84,7 +83,15 @@
     </div>
 
     <style media="screen">
+      @media (max-width: 550px){
+        nav{
+          flex-direction: column;
+        }
+      }
 
+      nav div:hover{
+        color:rgba(255,255,255,0.4);
+      }
     </style>
 
     <script type="text/javascript">
