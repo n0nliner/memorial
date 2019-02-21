@@ -24,13 +24,13 @@
         Навигация
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" onclick="goto(0);">О нас</a>
+        <a class="dropdown-item" onclick="goto(0);" style="font-size: 130%;">О нас</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" onclick="goto(1);">Наш продукт</a>
+        <a class="dropdown-item" onclick="goto(1);" style="font-size: 130%;">Наш продукт</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" onclick="goto(2);">Производство</a>
+        <a class="dropdown-item" onclick="goto(2);" style="font-size: 130%;">Производство</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" onclick="goto(3);">Установка</a>
+        <a class="dropdown-item" onclick="goto(3);" style="font-size: 130%;">Установка</a>
       </div>
     </div>
 
@@ -49,13 +49,17 @@
             <div style="min-width:165px" onclick="goto(1);">
               <a style="font-family:'Oswald',sans-serif;" class="text-white">Наш продукт</a>
             </div>
-            <div style="min-width:165px" onclick="goto(2);">
+            <div style="min-width:165px" onclick="goto(2)">
               <a style="font-family:'Oswald',sans-serif;" class="text-white">производство</a>
             </div>
             <div style="min-width:165px" onclick="goto(3);">
               <a style="font-family:'Oswald',sans-serif;" class="text-white">Установка</a>
             </div>
           </nav>
+
+          <style media="screen">
+            .dropdown-menu.show {min-width:100px;}
+          </style>
 
           </div>
         </div>
@@ -184,22 +188,3 @@
 
   </body>
 </html>
-
-<script type="text/javascript">
-  function gh(id){
-    return document.getElementById(id).offsetHeight;
-  }
-
-  var blocks_height = [0, gh('_header_'), gh("product")+gh("gal"), ,gh('monufacture'), gh("traceback") ,gh('footer')];
-
-  function goto(index){
-    var pos = 0;
-    for (var i = 0; i < index+1; i++){
-      pos += blocks_height[i];}
-    window.scrollTo(0, pos);
-  }
-
-  var rect = element.getBoundingClientRect();
-  console.log(rect.top, rect.right, rect.bottom, rect.left);
-
-</script>
